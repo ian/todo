@@ -1,0 +1,28 @@
+{
+  "name": "redisconf",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "bootstrap": "npm-run-all bootstrap:rel bootstrap:ui",
+    "bootstrap:rel": "yarn install",
+    "bootstrap:ui": "cd ui && yarn install",
+    "dev": "npm-run-all --parallel dev:rel dev:ui",
+    "dev:rel": "rel dev",
+    "dev:ui": "(cd ui && SKIP_PREFLIGHT_CHECK=true yarn start)",
+    "redis": "docker run -p 6379:6379 redislabs/redismod"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.0.1",
+    "jest": "26.6.0",
+    "npm-run-all": "^4.1.5",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "@reldb/cli": "^0.6.3",
+    "@reldb/run": "^0.12.1"
+  }
+}
