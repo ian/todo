@@ -1,4 +1,4 @@
-# Rel Example for RedisConf
+# Todo List - Example using Rel
 
 This is a basic TODO application written in React that connects to a Rel backend running on Redis.
 
